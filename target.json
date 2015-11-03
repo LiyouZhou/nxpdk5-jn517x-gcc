@@ -1,0 +1,63 @@
+{
+  "name": "nxpdk5-jn517x-gcc",
+  "version": "0.1.0",
+  "inherits": {
+    "mbed-gcc": "*"
+  },
+  "description": "Official mbed build target for the mbed NXP JN517x development board.",
+  "licenses": [
+    {
+      "url": "https://spdx.org/licenses/Apache-2.0",
+      "type": "Apache-2.0"
+    }
+  ],
+  "keywords": [
+    "mbed-target:jn517x",
+    "mbed-official",
+    "jn517x",
+    "nxpdk5-jn517x",
+    "gcc"
+  ],
+ "config": {
+    "mbed-os": {},
+	"cmsis": {
+      "nvic": {
+        "ram_vector_address": "0x20000000",
+        "flash_vector_address": "0x80100",
+        "user_irq_offset": 16,
+        "user_irq_number": 36
+      }
+    },
+	"hardware": {
+      "pins": {
+        "USBTX": "DIO9",
+        "USBRX": "DIO10"
+      }
+    }
+  },
+  "similarTo": [
+    "nxpdk5-jn517x",
+    "jn517x",
+    "nxp",
+    "cortex-m3",
+    "armv7-m",
+    "arm",
+    "gcc",
+	"mbed"
+  ],
+  "toolchain": "CMake/toolchain.cmake",
+  "scripts": {
+    "debug": [
+      "valinor",
+      "--target",
+      "JN517X",
+      "$program"
+    ],
+    "test": [
+      "mbed_test_wrapper",
+      "--target",
+      "JN517X",
+      "$program"
+    ]
+  }
+}
