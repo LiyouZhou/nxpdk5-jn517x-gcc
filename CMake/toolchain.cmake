@@ -1,4 +1,4 @@
-# Copyright (C) 2014-2015 ARM Limited. All rights reserved.
+# Copyright (C) 2015-2016 NXP B.V. All rights reserved.
 
 if(TARGET_NXPDK5_JN517X_GCC_TOOLCHAIN_INCLUDED)
     return()
