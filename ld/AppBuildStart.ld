@@ -57,6 +57,7 @@ EXTERN(AppColdStart) */
 
 EXTERN(isr_handlers)
 EXTERN(__wrap_main)
+EXTERN(AppWarmStart)
 
 /*EXTERN(vAHI_IntHandlerTimer2)
 EXTERN(vAHI_IntHandlerTimer3)
@@ -187,7 +188,7 @@ SECTIONS
         SHORT((ABSOLUTE(_bss_length) / 4) & 0xFFFF)
 
         /* Image entry points */
-        LONG(ABSOLUTE(__wrap_main))
+        LONG(ABSOLUTE(AppWarmStart))
         LONG(ABSOLUTE(__wrap_main))
     } >flash
         _enc_offset = (_enc_start & 0x0000000F);

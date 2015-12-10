@@ -16,7 +16,8 @@
     "mbed-official",
     "jn517x",
     "nxpdk5-jn517x",
-    "gcc"
+    "cr-gcc",
+	"gcc"
   ],
  "config": {
     "mbed-os": {},
@@ -42,6 +43,7 @@
     "cortex-m3",
     "armv7-m",
     "arm",
+	"cr-gcc",
     "gcc",
 	"mbed"
   ],
