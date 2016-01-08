@@ -32,6 +32,12 @@
       "pins": {
         "USBTX": "DIO9",
         "USBRX": "DIO10"
+      },
+	  "test-pins": {
+        "i2c": {
+          "sda": "DIO2",
+          "scl": "DIO3"
+        }
       }
     }
   },
