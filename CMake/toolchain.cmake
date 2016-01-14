@@ -22,4 +22,9 @@ set(CMAKE_C_FLAGS_INIT             "${CMAKE_C_FLAGS_INIT} ${_CPU_COMPILATION_OPT
 set(CMAKE_ASM_FLAGS_INIT           "${CMAKE_ASM_FLAGS_INIT} ${_CPU_COMPILATION_OPTIONS}")
 set(CMAKE_CXX_FLAGS_INIT           "${CMAKE_CXX_FLAGS_INIT} ${_CPU_COMPILATION_OPTIONS}")
 set(CMAKE_MODULE_LINKER_FLAGS_INIT "${CMAKE_MODULE_LINKER_FLAGS_INIT} -mcpu=cortex-m3 -msoft-float -mthumb -u _printf_float")
-set(CMAKE_EXE_LINKER_FLAGS_INIT    "${CMAKE_EXE_LINKER_FLAGS_INIT} -mcpu=cortex-m3 -msoft-float -mthumb -u _printf_float -L\"${CMAKE_CURRENT_LIST_DIR}/../ld\" -T\"${CMAKE_CURRENT_LIST_DIR}/../ld/JN5179.ld\"") 
+
+if(CMAKE_BUILD_TYPE MATCHES Debug)
+	set(CMAKE_EXE_LINKER_FLAGS_INIT    "${CMAKE_EXE_LINKER_FLAGS_INIT} -mcpu=cortex-m3 -msoft-float -mthumb -u _printf_float -Wl,--defsym,__sw_configuration=0x0103 -L\"${CMAKE_CURRENT_LIST_DIR}/../ld\" -T\"${CMAKE_CURRENT_LIST_DIR}/../ld/JN5179.ld\"")
+else()
+	set(CMAKE_EXE_LINKER_FLAGS_INIT    "${CMAKE_EXE_LINKER_FLAGS_INIT} -mcpu=cortex-m3 -msoft-float -mthumb -u _printf_float -L\"${CMAKE_CURRENT_LIST_DIR}/../ld\" -T\"${CMAKE_CURRENT_LIST_DIR}/../ld/JN5179.ld\"")
+endif()	
