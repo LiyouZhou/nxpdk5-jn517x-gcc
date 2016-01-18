@@ -16,6 +16,7 @@
     "mbed-official",
     "jn517x",
     "nxpdk5-jn517x",
+    "cr-gcc",
     "gcc"
   ],
  "config": {
@@ -48,8 +49,9 @@
     "cortex-m3",
     "armv7-m",
     "arm",
+    "cr-gcc",
     "gcc",
-	"mbed"
+    "mbed"
   ],
   "toolchain": "CMake/toolchain.cmake",
   "scripts": {
