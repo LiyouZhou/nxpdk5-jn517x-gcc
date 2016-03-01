@@ -29,6 +29,10 @@
         "user_irq_number": 36
       }
     },
+    "minar": {
+      "initial_event_pool_size": 4,
+      "additional_event_pools_size": 4
+    },
 	"hardware": {
       "pins": {
         "USBTX": "DIO9",
