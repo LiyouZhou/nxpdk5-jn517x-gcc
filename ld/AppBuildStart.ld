@@ -89,7 +89,7 @@ __encryption_iv1 = DEFINED(__encryption_iv1) ? __encryption_iv1 : 0x00000000;
 __encryption_iv2 = DEFINED(__encryption_iv2) ? __encryption_iv2 : 0x00000000;
 __encryption_iv3 = DEFINED(__encryption_iv3) ? __encryption_iv3 : 0x00000000;
 __encryption_iv4 = DEFINED(__encryption_iv4) ? __encryption_iv4 : 0x0000;
-__sw_configuration = DEFINED(__sw_configuration) ? __sw_configuration : 0x0000;
+__sw_configuration = DEFINED(__sw_configuration) ? __sw_configuration : 0x0103;
 __image_start = DEFINED(__image_start) ? __image_start : 0x00080000;
 __constant_vars = DEFINED(__constant_vars) ? __constant_vars : .;
 
